@@ -28,7 +28,7 @@ class ListPage extends StatelessWidget {
             return ListTile(
               title: Padding(
                 child: Text('$index', style: TextStyle(fontSize:28.0),),
-                padding:  EdgeInsets.all(10.0),)git ,
+                padding:  EdgeInsets.all(10.0),),
               );
             },
           itemCount: 10,
