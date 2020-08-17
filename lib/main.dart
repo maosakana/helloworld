@@ -29,8 +29,10 @@ class ListState extends StatelessWidget {
               child: Padding(
                 child: Text('$index', style: TextStyle(fontSize:28.0),),
                 padding:  EdgeInsets.all(10.0),),
-              );},
-          itemCount: 10,),
+              );
+            },
+          itemCount: 10,
+      ),
      );
   }
 }
