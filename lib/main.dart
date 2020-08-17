@@ -33,7 +33,7 @@ class ListPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => DetailPage(),
+                    builder: (_) => DetailPage(index),
                   ),
                 );
               },
@@ -46,7 +46,8 @@ class ListPage extends StatelessWidget {
 }
 
 class DetailPage extends StatelessWidget{
-  int index;
+  DetailPage(this.index);
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
