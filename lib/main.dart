@@ -14,21 +14,21 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(body: ListState()),
+      home: Scaffold(body: ListPage()),
     );
   }
 }
 
-class ListState extends StatelessWidget {
+class ListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
+        body: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
-            return Card(
-              child: Padding(
+            return ListTile(
+              title: Padding(
                 child: Text('$index', style: TextStyle(fontSize:28.0),),
-                padding:  EdgeInsets.all(10.0),),
+                padding:  EdgeInsets.all(10.0),)git ,
               );
             },
           itemCount: 10,
