@@ -29,10 +29,32 @@ class ListPage extends StatelessWidget {
               title: Padding(
                 child: Text('$index', style: TextStyle(fontSize:28.0),),
                 padding:  EdgeInsets.all(10.0),),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => DetailPage(),
+                  ),
+                );
+              },
               );
             },
           itemCount: 10,
       ),
      );
+  }
+}
+
+class DetailPage extends StatelessWidget{
+  int index;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: Center(
+          child: Text('$index', style: TextStyle(fontSize:28.0),),
+        )
+      ),
+    );
   }
 }
