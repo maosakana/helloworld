@@ -23,11 +23,12 @@ class MyApp extends StatelessWidget {
 class ListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.indigoAccent,
-      body: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.indigoAccent,
+        body: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return Container(
               margin: EdgeInsets.all(10.0),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -35,7 +36,7 @@ class ListPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Hero(
-                tag:  'detail_$index',
+                tag: 'detail_$index',
                 child: ListTile(
                   title: Padding(
                     child: Text(
@@ -54,9 +55,10 @@ class ListPage extends StatelessWidget {
                   },
                 ),
               ),
-          );
-        },
-        itemCount: 10,
+            );
+          },
+          itemCount: 10,
+        ),
       ),
     );
   }
