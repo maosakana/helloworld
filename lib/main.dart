@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/components/my_list_item.dart';
 import 'package:helloworld/detailPage.dart';
 
 void main() {
@@ -36,23 +37,9 @@ class ListPage extends StatelessWidget {
               ),
               child: Hero(
                 tag:  '$index',
-                child: ListTile(
-                  title: Padding(
-                    child: Text(
-                      '$index',
-                      style: TextStyle(fontSize: 28.0),
-                    ),
-                    padding: EdgeInsets.all(16.0),
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => DetailPage(index),
-                      ),
-                    );
-                  },
-                ),
+                child: Container(
+                  child: MyListItem(index),
+                )
               ),
           );
         },

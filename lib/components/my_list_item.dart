@@ -24,6 +24,6 @@ class MyListItem extends StatelessWidget {
           ),
         );
       },
-    )
+    );
   }
 }
