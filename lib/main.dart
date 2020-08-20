@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/detailPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,6 +30,14 @@ class ListPage extends StatelessWidget {
               title: Padding(
                 child: Text('$index', style: TextStyle(fontSize:28.0),),
                 padding:  EdgeInsets.all(10.0),),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => DetailPage(index),
+                  ),
+                );
+              },
               );
             },
           itemCount: 10,
