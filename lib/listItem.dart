@@ -20,10 +20,12 @@ class ListItem extends StatelessWidget {
           ),
           child: ListTile(
             title: Padding(
+              child: Material(
               child: Text(
                 '$index',
                 style: TextStyle(fontSize: 28.0),
               ),
+            ),
               padding: EdgeInsets.all(16.0),
             ),
             onTap: () {

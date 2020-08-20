@@ -15,10 +15,12 @@ class DetailPage extends StatelessWidget {
             tag: 'detail_$index',
             child: Container(
               child: Center(
+                child: Material(
                 child: Text(
                   '$index',
                   style: TextStyle(fontSize: 28.0),
                 ),
+              ),
               ),
               width: 200,
               height: 200,
