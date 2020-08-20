@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/detailPage.dart';
+import 'package:helloworld/listItem.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,25 +24,16 @@ class MyApp extends StatelessWidget {
 class ListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.indigoAccent,
         body: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-              title: Padding(
-                child: Text('$index', style: TextStyle(fontSize:28.0),),
-                padding:  EdgeInsets.all(10.0),),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => DetailPage(index),
-                  ),
-                );
-              },
-              );
-            },
+            return ListItem(index);
+          },
           itemCount: 10,
+        ),
       ),
-     );
+    );
   }
 }
