@@ -24,12 +24,24 @@ class ListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView.builder(
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
+      backgroundColor: Colors.indigoAccent,
+      body: ListView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+            margin: EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(color: Colors.white),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: ListTile(
               title: Padding(
-                child: Text('$index', style: TextStyle(fontSize:28.0),),
-                padding:  EdgeInsets.all(10.0),),
+                child: Text(
+                  '$index',
+                  style: TextStyle(fontSize: 28.0),
+                ),
+                padding: EdgeInsets.all(16.0),
+              ),
               onTap: () {
                 Navigator.push(
                   context,
@@ -38,10 +50,11 @@ class ListPage extends StatelessWidget {
                   ),
                 );
               },
-              );
-            },
-          itemCount: 10,
+            ),
+          );
+        },
+        itemCount: 10,
       ),
-     );
+    );
   }
 }
