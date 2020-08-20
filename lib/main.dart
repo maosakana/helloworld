@@ -28,29 +28,32 @@ class ListPage extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            margin: EdgeInsets.all(10.0),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(color: Colors.white),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: ListTile(
-              title: Padding(
-                child: Text(
-                  '$index',
-                  style: TextStyle(fontSize: 28.0),
-                ),
-                padding: EdgeInsets.all(16.0),
+              margin: EdgeInsets.all(10.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(color: Colors.white),
+                borderRadius: BorderRadius.circular(20),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => DetailPage(index),
+              child: Hero(
+                tag:  Text('$index'),
+                child: ListTile(
+                  title: Padding(
+                    child: Text(
+                      '$index',
+                      style: TextStyle(fontSize: 28.0),
+                    ),
+                    padding: EdgeInsets.all(16.0),
                   ),
-                );
-              },
-            ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => DetailPage(index),
+                      ),
+                    );
+                  },
+                ),
+              ),
           );
         },
         itemCount: 10,

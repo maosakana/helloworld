@@ -8,10 +8,23 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.indigoAccent,
       body: Container(
-          child: Center(
-            child: Text('$index', style: TextStyle(fontSize: 28.0),),
-          )
+        child: Hero(
+          tag: Text('$index'),
+          child: Container(
+            child: Center(
+              child: Text(
+                '$index',
+                style: TextStyle(fontSize: 28.0),
+              ),
+            ),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white,
+            ),
+          ),
+        ),
       ),
     );
   }
