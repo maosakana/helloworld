@@ -10,18 +10,22 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.indigoAccent,
       body: Container(
-        child: Hero(
-          tag: Text('$index'),
-          child: Container(
-            child: Center(
-              child: Text(
-                '$index',
-                style: TextStyle(fontSize: 28.0),
+        child: Center(
+          child: Hero(
+            tag: 'detail_$index',
+            child: Container(
+              child: Center(
+                child: Text(
+                  '$index',
+                  style: TextStyle(fontSize: 28.0),
+                ),
               ),
-            ),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+              ),
             ),
           ),
         ),

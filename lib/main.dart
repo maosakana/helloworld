@@ -35,7 +35,7 @@ class ListPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Hero(
-                tag:  Text('$index'),
+                tag:  'detail_$index',
                 child: ListTile(
                   title: Padding(
                     child: Text(
