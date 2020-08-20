@@ -11,7 +11,7 @@ class DetailPage extends StatelessWidget {
       backgroundColor: Colors.indigoAccent,
       body: Container(
         child: Hero(
-          tag: Text('$index'),
+          tag: '$index',
           child: Container(
             child: Center(
               child: Text(
