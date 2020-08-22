@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/detailPage.dart';
 import 'package:helloworld/listItem.dart';
+import 'package:helloworld/todoitem.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,9 +30,9 @@ class ListPage extends StatelessWidget {
         backgroundColor: Colors.indigoAccent,
         body: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
-            return ListItem(index);
+            return ToDoItem(index);
           },
-          itemCount: 10,
+          itemCount: 1,
         ),
       ),
     );
