@@ -1,9 +1,9 @@
-class Task {
+class Todo {
   String title;
   String description;
   bool isDone;
 
-  Task({
+  Todo({
     this.title,
     this.description,
     this.isDone = false,
