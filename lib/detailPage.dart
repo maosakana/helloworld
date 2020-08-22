@@ -6,6 +6,9 @@ class DetailPage extends StatelessWidget {
 
   DetailPage(ToDo todo);
 
+//  get title => 'title';
+//  get description => 'description';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
