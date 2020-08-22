@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/todo.dart';
 
 class DetailPage extends StatelessWidget {
-  DetailPage(this.index);
+  final ToDo todo = ToDo(title: null, description: null, isDone: false);
 
-  final int index;
+  DetailPage(ToDo todo);
+
+//  get title => 'title';
+//  get description => 'description';
 
   @override
   Widget build(BuildContext context) {
@@ -12,21 +16,30 @@ class DetailPage extends StatelessWidget {
       body: Container(
         child: Center(
           child: Hero(
-            tag: 'detail_$index',
+            tag: '$ToDo(title)',
             child: Container(
               child: Center(
                 child: Material(
-                child: Text(
-                  '$index',
-                  style: TextStyle(fontSize: 28.0),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        '$ToDo(title)',
+                        style: TextStyle(fontSize: 28.0),
+                      ),
+                      Text(
+                        '$ToDo(description)',
+                        style: TextStyle(fontSize: 14.0),
+                      )
+                    ],
+                  ),
                 ),
-              ),
               ),
               width: 200,
               height: 200,
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
                 color: Colors.white,
+                border: Border.all(color: Colors.white),
+                borderRadius: BorderRadius.circular(20),
               ),
             ),
           ),
