@@ -1,9 +1,9 @@
-class Todo {
+class ToDo {
   String title;
   String description;
   bool isDone;
 
-  Todo({
+  ToDo({
     this.title,
     this.description,
     this.isDone = false,
