@@ -4,18 +4,14 @@ import 'package:helloworld/todo.dart';
 
 class ToDoItem extends StatelessWidget {
   final ToDo todo = ToDo(title: null, description: null, isDone: false);
-
   ToDoItem(todo);
 
-  get title => 'title';
-
-  get description => 'description';
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Hero(
-        tag: '$title',
+        tag: '$ToDo(title)',
         child: Container(
           margin: EdgeInsets.all(10.0),
           decoration: BoxDecoration(
@@ -29,11 +25,11 @@ class ToDoItem extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      '$title',
+                      '$ToDo(title)',
                       style: TextStyle(fontSize: 28.0),
                     ),
                     Text(
-                      '$description',
+                      '$ToDo(description)',
                       style: TextStyle(fontSize: 14.0),
                     )
                   ],
@@ -45,7 +41,7 @@ class ToDoItem extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => DetailPage(title, description),
+                  builder: (_) => DetailPage(todo),
                 ),
               );
             },
